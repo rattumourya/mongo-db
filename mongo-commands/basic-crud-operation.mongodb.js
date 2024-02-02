@@ -13,5 +13,16 @@ use("flights");
 //     "intercontinental": false
 //   })
 
-// get flightData collection data
+
+// db.flightData.insertOne({
+//     departureAirport: "TXL",
+//     arrivalAirport: "LHR"
+// })
+
+// db.flightData.insertOne({
+//     _id: "txl-lhr-1",
+//     departureAirport: "TXL",
+//     arrivalAirport: "LHR"
+// })
+
 db.flightData.find().pretty();
