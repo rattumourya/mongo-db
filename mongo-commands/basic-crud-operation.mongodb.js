@@ -25,4 +25,24 @@ use("flights");
 //     arrivalAirport: "LHR"
 // })
 
-db.flightData.find().pretty();
+
+
+// delete one document
+// db.flightData.deleteOne({departureAirport: "TXL"})
+
+
+// db.flightData.deleteMany();
+// Error : Missing required argument 
+
+
+// db.flightData.updateOne({distance: 2000, marker: "delete"});
+//Update document requires atomic operators
+
+// db.flightData.updateOne({distance: 12000}, {$set: {marker: "delete"}})
+
+
+// db.flightData.updateMany({},{$set: {marker: "toDelete"}});
+
+db.flightData.deleteMany({marker:"toDelete"});
+
+db.flightData.find().pretty();  
