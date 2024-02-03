@@ -43,6 +43,23 @@ use("flights");
 
 // db.flightData.updateMany({},{$set: {marker: "toDelete"}});
 
-db.flightData.deleteMany({marker:"toDelete"});
+// db.flightData.deleteMany({marker:"toDelete"});
+// deleted all documents inserted in the filghtsData
 
+// db.flightData.insertMany([
+//     {
+//       "departureAirport": "MUC",
+//       "arrivalAirport": "SFO",
+//       "aircraft": "Airbus A380",
+//       "distance": 12000,
+//       "intercontinental": true
+//     },
+//     {
+//       "departureAirport": "LHR",
+//       "arrivalAirport": "TXL",
+//       "aircraft": "Airbus A320",
+//       "distance": 950,
+//       "intercontinental": false
+//     }
+//   ]);
 db.flightData.find().pretty();  
