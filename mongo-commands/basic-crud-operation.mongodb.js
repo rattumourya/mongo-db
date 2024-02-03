@@ -202,3 +202,23 @@ db.passenger.find({},{name: 1}).toArray();
 db.passenger.find({},{name: 1, _id: 0}).toArray();
 // _id can be excluded by usining _id: 0 using projection
 
+
+// Embedded document
+//  Up to 100 level of nesting
+// Max 16mb document
+
+
+// Arrays
+// list of document can be added inside a document
+
+// db.flightData.updateMany({} , {$set: {status: { description: "on-time" , lastupdated: "1 hour ago"}}});
+
+// db.flightData.updateMany({} , {$set: {status: { description: "on-time" , lastupdated: "1 hour ago" , details: {responsible: "Ratan mourya"}}}});
+
+// db.flightData.find().pretty();
+
+// db.passenger.updateOne({name: "Albert Twostone"},{$set: {hobbies: ["Sports","cooking"]}});
+
+
+
+db.passenger.find().pretty().toArray();
