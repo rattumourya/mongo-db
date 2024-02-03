@@ -221,4 +221,15 @@ db.passenger.find({},{name: 1, _id: 0}).toArray();
 
 
 
-db.passenger.find().pretty().toArray();
+// db.passenger.find().pretty().toArray();
+
+// accessing structured data
+// db.passenger.findOne({name: "Albert Twostone"});
+// db.passenger.findOne({name: "Albert Twostone"}).hobbies;
+// db.passenger.find({hobbies: "Sports"});
+
+
+db.flightData.find({"status.description": "on-time"});
+db.flightData.find({"status.details.responsible": "Ratan mourya"});
+
+
