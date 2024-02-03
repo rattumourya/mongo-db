@@ -193,3 +193,12 @@ db.flightData.findOne({distance: {$gt: 900}});
 //print the data using forEach loop
 // db.passenger.find().forEach((passengerData) => {printjson(passengerData)});
 
+// projection
+
+db.passenger.find({},{name: 1}).toArray();
+// id will always project implicitly 
+
+
+db.passenger.find({},{name: 1, _id: 0}).toArray();
+// _id can be excluded by usining _id: 0 using projection
+
