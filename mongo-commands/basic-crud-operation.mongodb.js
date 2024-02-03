@@ -62,4 +62,10 @@ use("flights");
 //       "intercontinental": false
 //     }
 //   ]);
-db.flightData.find().pretty();  
+db.flightData.find({intercontinental: true}); 
+db.flightData.find({distance: 950});
+db.flightData.find({distance: {$gt: 900}}).pretty();
+// db.flightData.findOne({distance: {$gt: 900}}).pretty();
+//db.flightData. ... 900}}).pretty is not a function
+
+db.flightData.findOne({distance: {$gt: 900}});
