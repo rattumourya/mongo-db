@@ -69,3 +69,31 @@ db.flightData.find({distance: {$gt: 900}}).pretty();
 //db.flightData. ... 900}}).pretty is not a function
 
 db.flightData.findOne({distance: {$gt: 900}});
+
+// db.flightData.updateOne({_id:ObjectId('65bdfc9b0b79889e4bf77d56')},{$set: {deplayed: true}});
+
+// db.flightData.updateOne({_id:ObjectId('65bdfc9b0b79889e4bf77d56')}, {deplayed: true});
+//Update document requires atomic operators
+
+// db.flightData.updateMany({_id:ObjectId('65bdfc9b0b79889e4bf77d56')}, {deplayed: true});
+// Update document requires atomic operators
+
+// db.flightData.update({_id:ObjectId('65bdfc9b0b79889e4bf77d56')}, {deplayed: true});
+// Update document requires atomic operators
+
+
+// db.flightData.replaceOne({_id:ObjectId('65bdfc9b0b79889e4bf77d56')}, {deplayed: true});
+
+// db.flightData.updateOne({_id:ObjectId('65bdfc9b0b79889e4bf77d56')},
+//                         {$set: {
+//                             "departureAirport": "MUC",
+//                             "arrivalAirport": "SFO",
+//                             "aircraft": "Airbus A380",
+//                             "distance": 12000,
+//                             "intercontinental": true,
+//                             "deplayed": false
+//                         }});
+
+
+
+db.flightData.find().pretty();
