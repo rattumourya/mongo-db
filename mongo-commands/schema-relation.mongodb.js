@@ -36,7 +36,7 @@ db.stats();
 
 typeof(db.numbers.findOne().a);
 
-// ***************** One to One Relation ***********************
+// ***************** One to One Relation - Embedded ***********************
 // Patient A  < - > Summary A
 // Patient B  < - > Summary B
 // Patient C  < - > Summary C
@@ -53,5 +53,15 @@ db.patients.findOne({name:"Max"});
 var dsid  = db.patients.findOne({name: "Max"}).diseaseSummary;
 db.diseaseSummaries.findOne({_id: dsid});
 
+
+// ************************* One to One  - Using Reference ***********************
+show("dbs");
+use("cardData");
+// db.persons.insertOne({name:"Max",car:{model:"BMW",price:4000}});
+// db.persons.deleteMany({});
+// db.persons.insertOne({name: "Max",age: 29,salary:3000});
+db.persons.find().pretty();
+db.cars.insertOne({model:"BMW",price:4000,owner:ObjectId('65c0ef0c9c0851571f56760a')});
+db.cars.find().pretty();
 
 
