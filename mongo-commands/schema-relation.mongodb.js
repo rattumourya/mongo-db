@@ -74,6 +74,16 @@ db.questionThreads.find().pretty();
 //         {_id:"q1a2",text:"Thanks!"}]);
 db.answers.find().pretty();
 // db.questionThreads.deleteMany({});
-db.questionThreads.insertOne({creator:"Max",question:"How does that works?",answers:[{text:"Like that ."},{text:"Thanks!"}]});
+// db.questionThreads.insertOne({creator:"Max",question:"How does that works?",answers:[{text:"Like that ."},{text:"Thanks!"}]});
 db.questionThreads.find().pretty();
 
+// *********************************** One to Many - References ******************************
+show('dbs');
+use('cityData');
+// db.cities.insertOne({name:"New York City",coordinates:{lat: 21,lng:55}});
+db.cities.find().pretty();
+db.citizens.insertMany([
+        {name: "Max Schwarzmuleller",cityId: ObjectId('65c0f493666bd18a13bd79ca')},
+        {name:"Manuel Lorenz",cityId:ObjectId('65c0f493666bd18a13bd79ca')}
+    ]);
+db.citizens.find().pretty();
