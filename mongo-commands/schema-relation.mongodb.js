@@ -61,7 +61,19 @@ use("cardData");
 // db.persons.deleteMany({});
 // db.persons.insertOne({name: "Max",age: 29,salary:3000});
 db.persons.find().pretty();
-db.cars.insertOne({model:"BMW",price:4000,owner:ObjectId('65c0ef0c9c0851571f56760a')});
+// db.cars.insertOne({model:"BMW",price:4000,owner:ObjectId('65c0ef0c9c0851571f56760a')});
 db.cars.find().pretty();
 
+// ******************************** One to Many - Embedded  *****************************
+show("dbs");
+use("support");
+// db.questionThreads.insertOne({creator: "Max",question:"How does that all work?",answers: ["q1a1","q1a2"]});
+db.questionThreads.find().pretty();
+// db.answers.insertMany([ 
+//         {_id:"q1a1",text: "it works like that."},
+//         {_id:"q1a2",text:"Thanks!"}]);
+db.answers.find().pretty();
+// db.questionThreads.deleteMany({});
+db.questionThreads.insertOne({creator:"Max",question:"How does that works?",answers:[{text:"Like that ."},{text:"Thanks!"}]});
+db.questionThreads.find().pretty();
 
