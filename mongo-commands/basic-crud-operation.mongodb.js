@@ -229,7 +229,10 @@ db.passenger.find({},{name: 1, _id: 0}).toArray();
 // db.passenger.find({hobbies: "Sports"});
 
 
-db.flightData.find({"status.description": "on-time"});
-db.flightData.find({"status.details.responsible": "Ratan mourya"});
+// db.flightData.find({"status.description": "on-time"});
+// db.flightData.find({"status.details.responsible": "Ratan mourya"});
+
+// use('flights')
+// db.dropDatabase()
 
 
