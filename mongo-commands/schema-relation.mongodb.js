@@ -36,3 +36,22 @@ db.stats();
 
 typeof(db.numbers.findOne().a);
 
+// ***************** One to One Relation ***********************
+// Patient A  < - > Summary A
+// Patient B  < - > Summary B
+// Patient C  < - > Summary C
+
+use("hospital");
+// db.patients.insertOne({name: "Max",age: 29, diseaseSummary: "summary-max-1"});
+db.patients.find().pretty();
+// db.diseaseSummaries.insertOne({_id:"summary-max-1",diseases: ["Cold","Broken leg"]});
+// db.diseaseSummaries.deleteMany({});
+db.diseaseSummaries.find().pretty();
+
+// get a patients diseases summaries
+db.patients.findOne({name:"Max"});
+var dsid  = db.patients.findOne({name: "Max"}).diseaseSummary;
+db.diseaseSummaries.findOne({_id: dsid});
+
+
+
