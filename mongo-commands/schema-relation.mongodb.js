@@ -103,3 +103,14 @@ db.customers.find().pretty();
 // db.customers.updateOne({},{$set: {orders: [{productId:ObjectId("65c22eabcef1c806cd86231a"),quantity:2}]}});
 db.customers.find().pretty();
 
+// *********************************** Many to Many - References ******************************
+show('dbs');
+use("bookRegistry");
+// db.books.insertOne({name: "My Favrouite Book", authors:[{name: "Max Schwarz", age: 29},{name:"Manual Lor",age:30}]});
+db.books.find().pretty();
+// db.authors.insertMany([{name: "Max Schwarz", age: 29, address:{street:"Main"}},{name:"Manual Lor",age:30,address:{street:"Tree"}}]);
+// db.authors.deleteMany({});
+db.authors.find().pretty();
+db.books.updateOne({},{$set: {authors: [ObjectId("65c234e880a30ed1d734cbfc"),ObjectId("65c234e880a30ed1d734cbfd")]}});
+// db.books.deleteMany({});
+db.books.find().pretty();
