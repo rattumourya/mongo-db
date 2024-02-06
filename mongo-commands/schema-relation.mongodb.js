@@ -107,10 +107,21 @@ db.customers.find().pretty();
 show('dbs');
 use("bookRegistry");
 // db.books.insertOne({name: "My Favrouite Book", authors:[{name: "Max Schwarz", age: 29},{name:"Manual Lor",age:30}]});
-db.books.find().pretty();
+// db.books.find().pretty();
 // db.authors.insertMany([{name: "Max Schwarz", age: 29, address:{street:"Main"}},{name:"Manual Lor",age:30,address:{street:"Tree"}}]);
 // db.authors.deleteMany({});
-db.authors.find().pretty();
-db.books.updateOne({},{$set: {authors: [ObjectId("65c234e880a30ed1d734cbfc"),ObjectId("65c234e880a30ed1d734cbfd")]}});
+// db.authors.find().pretty();
+// db.books.updateOne({},{$set: {authors: [ObjectId("65c23a95aaf06ca062c3a55e"),ObjectId("65c23a95aaf06ca062c3a55f")]}});
 // db.books.deleteMany({});
 db.books.find().pretty();
+
+// ***********************************  $lookup ********************************
+// db.books.aggregate([{$lookup: {
+//   from: "authors",
+//   localField: "authors",
+//   foreignField: "_id",
+//   as: "creators"
+// }}]).pretty();
+// db.books.deleteMany({});
+// db.authors.find().pretty();
+// db.books.find().pretty();
