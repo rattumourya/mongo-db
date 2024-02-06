@@ -34,7 +34,7 @@ db.stats();
 
 // db.numbers.insertOne({a: NumberInt(1)});
 
-typeof(db.numbers.findOne().a);
+// typeof(db.numbers.findOne().a);
 
 // ***************** One to One Relation - Embedded ***********************
 // Patient A  < - > Summary A
@@ -50,8 +50,8 @@ db.diseaseSummaries.find().pretty();
 
 // get a patients diseases summaries
 db.patients.findOne({name:"Max"});
-var dsid  = db.patients.findOne({name: "Max"}).diseaseSummary;
-db.diseaseSummaries.findOne({_id: dsid});
+// var dsid  = db.patients.findOne({name: "Max"}).diseaseSummary;
+// db.diseaseSummaries.findOne({_id: dsid});
 
 
 // ************************* One to One  - Using Reference ***********************
@@ -82,8 +82,24 @@ show('dbs');
 use('cityData');
 // db.cities.insertOne({name:"New York City",coordinates:{lat: 21,lng:55}});
 db.cities.find().pretty();
-db.citizens.insertMany([
-        {name: "Max Schwarzmuleller",cityId: ObjectId('65c0f493666bd18a13bd79ca')},
-        {name:"Manuel Lorenz",cityId:ObjectId('65c0f493666bd18a13bd79ca')}
-    ]);
+// db.citizens.insertMany([
+//         {name: "Max Schwarzmuleller",cityId: ObjectId('65c0f493666bd18a13bd79ca')},
+//         {name:"Manuel Lorenz",cityId:ObjectId('65c0f493666bd18a13bd79ca')}
+//     ]);
 db.citizens.find().pretty();
+
+// *********************************** Many to Many - Embedded ******************************
+show('dbs');
+use('shop');
+// db.products.insertOne({title:"A book",price:12.99});
+db.products.find().pretty();
+// db.customers.insertOne({name:"Max",age: 29});
+// db.customers.find().pretty();
+// db.orders.insertOne({customerId: ObjectId("65c22ecdf1ea0c163a46f3dc"),orderId: ObjectId("65c22eabcef1c806cd86231a")});
+// db.orders.find().pretty();
+// db.customers.updateOne({},{$set: {orders: [{title:"A Book",price: 12.99,quantity:2}]}})
+db.customers.find().pretty();
+// or
+// db.customers.updateOne({},{$set: {orders: [{productId:ObjectId("65c22eabcef1c806cd86231a"),quantity:2}]}});
+db.customers.find().pretty();
+
