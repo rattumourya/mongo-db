@@ -67,3 +67,6 @@ use("contactData");
 // db.personData.insertOne({name:"Michaela",age:51},{writeConcern: {w: 1,j:true}});
 // db.personData.insertOne({name:"Michael",age:51},{writeConcern: {w: 1,j:true,wtimeout:200}});
 // db.personData.insertOne({name:"Michael",age:51},{writeConcern: {w: 1,j:true,wtimeout:1}});
+
+use("movieData");
+db.movies.find().pretty();
