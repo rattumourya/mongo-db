@@ -60,4 +60,10 @@ use("contactData");
 // E11000 duplicate key error collection: contactData.hobbies index: _id_ dup key: { _id: "cooking" }
 
 
-db.hobbies.find().pretty();
+// db.hobbies.find().pretty();
+// db.personData.insertOne({name:"ratan",age:25},{writeConcern: {w: 0}});
+// db.personData.insertOne({name:"Alex",age:25},{writeConcern: {w: 1}});
+// db.personData.insertOne({name:"Michael",age:51},{writeConcern: {w: 1,j:false}});
+// db.personData.insertOne({name:"Michaela",age:51},{writeConcern: {w: 1,j:true}});
+// db.personData.insertOne({name:"Michael",age:51},{writeConcern: {w: 1,j:true,wtimeout:200}});
+// db.personData.insertOne({name:"Michael",age:51},{writeConcern: {w: 1,j:true,wtimeout:1}});
