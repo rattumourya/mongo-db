@@ -36,4 +36,7 @@ use("shows");
 
 // db.movies.find({$and: [{"rating.average": {$gt: 9}},{genres: "Drama"}]}).pretty();
 // db.movies.find({"rating.average": {$gt: 9}, "genres": "Drama"});
-db.movies.find({"rating.average": {$gt: 9}, "genres": "Drama"}).count();
+// db.movies.find({"rating.average": {$gt: 9}, "genres": "Drama"}).count();
+
+// db.movies.find({runtime: {$not: {$gt: 60}}}).pretty();
+// db.movies.find({runtime: {$not: {$eq: 60}}}).count();
