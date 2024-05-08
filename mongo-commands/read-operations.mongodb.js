@@ -20,4 +20,7 @@ use("shows");
 
 // db.movies.find({"rating.average": {$gt: 7}}).pretty();
 // db.movies.find({"genres": "Drama"}).pretty();
-db.movies.find({"genres" : ["Drama"]}).pretty();
+// db.movies.find({"genres" : ["Drama"]}).pretty();
+
+db.movies.find({runtime: {$in: [30, 42]}}).pretty();
+db.movies.find({runtime: {$nin: [30, 42]}}).pretty();
