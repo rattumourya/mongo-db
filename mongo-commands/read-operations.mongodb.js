@@ -22,5 +22,14 @@ use("shows");
 // db.movies.find({"genres": "Drama"}).pretty();
 // db.movies.find({"genres" : ["Drama"]}).pretty();
 
-db.movies.find({runtime: {$in: [30, 42]}}).pretty();
-db.movies.find({runtime: {$nin: [30, 42]}}).pretty();
+// db.movies.find({runtime: {$in: [30, 42]}}).pretty();
+// db.movies.find({runtime: {$nin: [30, 42]}}).pretty();
+
+// db.movies.find({"rating.average": {$gt: 5}}).pretty();
+// db.movies.find({"rating.average": {$gt: 9}}).count();
+// db.movies.find({"rating.average": {$gt: 9.5}}).count();
+// db.movies.find({"rating.average": {$gt: 9.4}}).count();
+// db.movies.find({"rating.average": {$gt: 9.3}}).count();
+
+// db.movies.find({$or: [{"rating.average": {$lt: 5}}, {"rating.average": {$gt: 9.3}}]}).pretty();
+db.movies.find({$nor: [{"rating.average": {$lt: 5}}, {"rating.average": {$gt: 9.3}}]}).pretty();
