@@ -9,4 +9,11 @@ use("shows");
 // db.movies.find({runtime: 60}).pretty();
 // db.movies.findOne({runtime: 60});
 
+// start learning comparison operator
 
+// db.movies.findOne({runtime: {$eq: 60}})
+// db.movies.find({runtime: {$ne: 60}}).pretty();
+
+// db.movies.find({runtime: {$lt: 50}}).pretty();
+// db.movies.find({runtime: {$lte: 42}}).pretty();
+// db.movies.find({runtime: {$gte: 50}}).pretty();

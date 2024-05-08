@@ -1,3 +1,4 @@
 More Details about Config Files: https://docs.mongodb.com/manual/reference/configuration-options/
 More Details about the Shell (mongo) Options: https://www.mongodb.com/docs/manual/reference/method/
 More Details about the Server (mongod) Options: https://docs.mongodb.com/manual/reference/program/mongod/
+More Details about mongo db operators https://www.mongodb.com/docs/manual/reference/operator/query-comparison/
