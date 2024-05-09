@@ -1,7 +1,7 @@
 // mongoimport --db shows --collection movies --file json_files/tv-shows.json --jsonAr
 // ray
 
-use("shows");
+// use("shows");
 // db.movies.findOne();
 
 // db.movies.find({name:"The Last Ship"}).pretty();
@@ -40,3 +40,20 @@ use("shows");
 
 // db.movies.find({runtime: {$not: {$gt: 60}}}).pretty();
 // db.movies.find({runtime: {$not: {$eq: 60}}}).count();
+
+// create user database
+use("user");
+// db.users.insertMany([
+//                 {name: "Max", hobbies: [{title: "Sports",frequency:3},{title: "Cooking",frequency:6}],phone: "0131782734"},
+//                 {name: "Manuel", hobbies: [{title: "Cooking",frequency:5},{title: "Cars",frequency:2}],phone: "012177972",age: 30}
+//                 ]);
+
+// db.users.findOne({name: "Manuel"});
+// db.users.find().pretty();
+// db.users.find({age: {$exists: true}}).pretty();
+// db.users.find({age: {$exists: true,$gte: 30}}).pretty();
+// db.users.insertOne({name: "Max", hobbies: [{title: "Sports",frequency:2},{title: "Yoga",frequency:3}],phone: "12341234",age: null});
+// db.users.find().pretty();
+// db.users.find({age: {$exists: false}}).pretty();
+// db.users.find({age: {$exists: true,$eq: null}}).pretty();
+db.users.find({age: {$exists: true,$ne: null}}).pretty();
