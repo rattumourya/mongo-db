@@ -56,4 +56,11 @@ use("user");
 // db.users.find().pretty();
 // db.users.find({age: {$exists: false}}).pretty();
 // db.users.find({age: {$exists: true,$eq: null}}).pretty();
-db.users.find({age: {$exists: true,$ne: null}}).pretty();
+// db.users.find({age: {$exists: true,$ne: null}}).pretty();
+
+// db.users.insertOne({name: "Ratan", hobbies: [{title: "Sports",frequency:10},{title: "Driving",frequency:6}],phone: 5245658578});
+// db.users.find().pretty();
+// db.users.find({phone: {$type: ["double"]}}).pretty();
+// db.users.find({phone: {$type: "number"}}).pretty();
+// db.users.find({phone: {$type: ["number","string"]}}).pretty();
+
