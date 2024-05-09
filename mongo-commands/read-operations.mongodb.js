@@ -64,8 +64,21 @@
 // db.users.find({phone: {$type: "number"}}).pretty();
 // db.users.find({phone: {$type: ["number","string"]}}).pretty();
 
-use("shows");
+// use("shows");
 // db.movies.find();
 // db.movies.find({summary: {$regex: /musical/}})
 
+
+use("financialData");
+// db.sales.insertMany([
+//     {volume: 100,target: 120},
+//     {volume: 89,target: 80},
+//     {volume:200,target: 177}
+// ]);
+
+// db.sales.find();
+// db.sales.find({$expr: {$gt: ["volume","target"]}});
+// db.sales.find({$expr: {$gt: ["$volume","$target"]}}).pretty();
+
+// pratice design a mongo query for expression
 
