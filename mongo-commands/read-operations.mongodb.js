@@ -42,7 +42,7 @@
 // db.movies.find({runtime: {$not: {$eq: 60}}}).count();
 
 // create user database
-use("user");
+// use("user");
 // db.users.insertMany([
 //                 {name: "Max", hobbies: [{title: "Sports",frequency:3},{title: "Cooking",frequency:6}],phone: "0131782734"},
 //                 {name: "Manuel", hobbies: [{title: "Cooking",frequency:5},{title: "Cars",frequency:2}],phone: "012177972",age: 30}
@@ -63,4 +63,9 @@ use("user");
 // db.users.find({phone: {$type: ["double"]}}).pretty();
 // db.users.find({phone: {$type: "number"}}).pretty();
 // db.users.find({phone: {$type: ["number","string"]}}).pretty();
+
+use("shows");
+// db.movies.find();
+// db.movies.find({summary: {$regex: /musical/}})
+
 
