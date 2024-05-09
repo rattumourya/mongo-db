@@ -83,6 +83,8 @@
 // pratice design a mongo query for expression
 
 use("user");
-// db.users.find().pretty();
+db.users.find().pretty();
 // db.users.insertOne({name: "Rakesh", hobbies: [{title: "Sports",frequency:10},{title: "Driving",frequency:6},{title: "Cooking",frequency: 1}],phone: 5644545478845});
 // db.users.findOne({hobbies: {$size: 3}})
+// db.users.find({"hobbies.title": }).pretty();
+// db.moviesstarts.find({genre: {$all: ["action","thriller"]}}).pretty()
