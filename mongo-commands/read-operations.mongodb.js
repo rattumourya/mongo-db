@@ -69,7 +69,7 @@
 // db.movies.find({summary: {$regex: /musical/}})
 
 
-use("financialData");
+// use("financialData");
 // db.sales.insertMany([
 //     {volume: 100,target: 120},
 //     {volume: 89,target: 80},
@@ -82,3 +82,7 @@ use("financialData");
 
 // pratice design a mongo query for expression
 
+use("user");
+// db.users.find().pretty();
+// db.users.insertOne({name: "Rakesh", hobbies: [{title: "Sports",frequency:10},{title: "Driving",frequency:6},{title: "Cooking",frequency: 1}],phone: 5644545478845});
+// db.users.findOne({hobbies: {$size: 3}})
